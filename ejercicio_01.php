@@ -12,25 +12,33 @@ echo "<!DOCTYPE html>
     <body>
         <form action='ejercicio_01.php' enctype='multipart/form-data' method='post'>
             <p>Dime un dia de la semana: <input type='number' name='numerosem'/></p>
+            <p>Dime la hora de ese dia <input type='number' name='HoraDia'/></p>
             <p><input type='submit' value='Submit'/></p>";
      $Semana=array(
-        'Lunes' => array('IAW','IAW','IAW'),
-        'Martes' => array('IAW','SAD','SAD'),
-        'Miercoles' => array('ASX','EIEA','EIEA'),
-        'Jueves' => array('ASX','ASX','EIEA'),
-        'Viernes' => array('IAW','SRI','SRI'),
+        "Lunes" => array('IAW','IAW','SRI','SRI','ASO','ASX'),
+        "Martes" => array('SAD','SAD','SAD','ASO','ASO','ASO','SRI','SRI','SRI'),
+        'Miercoles' => array('ASX','EIEA','EIEA','ASO','IAW','IAW'),
+        'Jueves' => array('ASX','ASX','EIEA','IAW','IAW','SRI','ASO','ASO','ASO'),
+        'Viernes' => array('IAW','SRI','SRI','SAD','SAD','SAD'),
     );
-$Numero=isset($_REQUEST['numerosem']);
-if ($Numero > 5) {
-    echo "El numero tiene que ser entre 1 y 5";    
+
+$Numero=isset($_REQUEST['numerosem'])?$_REQUEST['numerosem']:1;
+$HoraDia=isset($_REQUEST['HoraDia'])?$_REQUEST['HoraDia']:1;
+if ($Numero > 5 or $HoraDia > 9) {
+    echo "El numero tiene que ser entre 1 y 5<br/>";
+    echo "La hora del dia tiene que ser menor que 9";    
 }else{
     $cont = 1;
     foreach ($Semana as $Dia => $horario_dia) {
         if($cont == $Numero){
-            echo $horario_dia[1][$Dia];
+            echo "El $Dia tenemos a $HoraDia'ª':<br/>";
+            if ($horario_dia[$HoraDia-1] == "") {
+                echo "Hora libre";
+            }else{
+            echo $horario_dia[$HoraDia-1];
+                }
         }
         $cont++;
-        
     }
         
 }
