@@ -23,7 +23,8 @@ if (is_numeric($Horas)) {
         $Resultado = $Horas * 12;
         echo "El Total del salario semanal es $Resultado" ;
     }elseif($Horas > 40){
-        $Resultado = $Horas * 12;
+        $Horas = $Horas-40;
+        $Resultado = $Horas * 16+40*12;
         echo "El Total del salario semanal es $Resultado" ;
 }
     }
