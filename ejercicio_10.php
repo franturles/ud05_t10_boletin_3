@@ -10,7 +10,7 @@ echo "<!DOCTYPE html>
         </head>
     <body>
     <form action='ejercicio_10.php' enctype='multipart/form-data' method='post'>
-    <p>Dia del mes:<input type='number' name='Dia'/></p>
+    <p>Dia del mes:<input type='number' min='1' max='31' name='Dia'/></p>
     <label>Mes:</label>
     <select name='Mes'>
         <option value='01'>Enero</option>
@@ -32,6 +32,27 @@ $Mes=$_REQUEST["Mes"];
 $Año= date("Y");
 $Fecha=("$Dia-$Mes-$Año");
 #$FechaNueva=date("m-%B-Y",strtotime($Fecha));
-$FechaNueva=strftime("%d-%B-%Y",strtotime($Fecha));
+$FechaNueva=date("d-m-Y",strtotime($Fecha));
+echo $FechaNueva;
+$Horoscopo=array(
+    '20-01-'.$Año => 'Acuario',
+    '19-02-'.$Año => 'Piscis',
+    '21-03-'.$Año => 'Aries',
+    '20-04-'.$Año => 'Tauro',
+    '21-05-'.$Año => 'Geminis',
+    '21-06-'.$Año => 'Cancer',
+    '23-07-'.$Año => 'Leo',
+    '23-08-'.$Año => 'Virgo',
+    '23-09-'.$Año => 'Libra',
+    '23-10-'.$Año => 'Escorpio',
+    '22-11-'.$Año => 'Sagitario',
+    '22-12-'.$Año => 'Capricornio',
+);
+foreach ($Horoscopo as $FechaZo => $Zodiaco) {
+    
+    if($FechaNueva >= $FechaZo){
+        echo $Zodiaco;
+    }
+}
 
 ?>
