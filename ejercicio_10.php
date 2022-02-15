@@ -31,9 +31,8 @@ $Dia=$_REQUEST["Dia"];
 $Mes=$_REQUEST["Mes"];
 $Año= date("Y");
 $Fecha=("$Dia-$Mes-$Año");
-#$FechaNueva=date("m-%B-Y",strtotime($Fecha));
-$FechaNueva=date("d-m-Y",strtotime($Fecha));
-echo $FechaNueva;
+#$FechaNueva=date("d-m-Y",strtotime($Fecha));
+$FechaNueva=date("d-m-Y",mktime($Fecha));
 $Horoscopo=array(
     '20-01-'.$Año => 'Acuario',
     '19-02-'.$Año => 'Piscis',
@@ -49,7 +48,7 @@ $Horoscopo=array(
     '22-12-'.$Año => 'Capricornio',
 );
 foreach ($Horoscopo as $FechaZo => $Zodiaco) {
-    
+    $FechaZo=date("d-m-Y",mktime($FechaZo));
     if($FechaNueva >= $FechaZo){
         echo $Zodiaco;
     }
