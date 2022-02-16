@@ -29,29 +29,27 @@ echo "<!DOCTYPE html>
     <p><input type='submit' value='Submit'/></p>";
 $Dia=$_REQUEST["Dia"];
 $Mes=$_REQUEST["Mes"];
-$Año= date("Y");
-$Fecha=("$Dia-$Mes-$Año");
 #$FechaNueva=date("d-m-Y",strtotime($Fecha));
-$FechaNueva=date("d-m-Y",mktime($Fecha));
-$Horoscopo=array(
-    '20-01-'.$Año => 'Acuario',
-    '19-02-'.$Año => 'Piscis',
-    '21-03-'.$Año => 'Aries',
-    '20-04-'.$Año => 'Tauro',
-    '21-05-'.$Año => 'Geminis',
-    '21-06-'.$Año => 'Cancer',
-    '23-07-'.$Año => 'Leo',
-    '23-08-'.$Año => 'Virgo',
-    '23-09-'.$Año => 'Libra',
-    '23-10-'.$Año => 'Escorpio',
-    '22-11-'.$Año => 'Sagitario',
-    '22-12-'.$Año => 'Capricornio',
+$Fecha=mktime(0,0,0,intval($Mes),intval($Dia));
+$CalendarioHoroscopo=array(
+    mktime(0,0,0,1,20) => 'Capricornio',
+    mktime(0,0,0,2,19) => 'Acuario',
+    mktime(0,0,0,3,21) => 'Piscis',
+    mktime(0,0,0,4,20) => 'Aries',
+    mktime(0,0,0,5,22) => 'Tauro',
+    mktime(0,0,0,6,22) => 'Geminis',
+    mktime(0,0,0,7,23) => 'Cancer',
+    mktime(0,0,0,8,24) => 'Leo',
+    mktime(0,0,0,9,23) => 'Virgo',
+    mktime(0,0,0,10,23) => 'Libra',
+    mktime(0,0,0,11,21) => 'Escorpio',
+    mktime(0,0,0,12,22) => 'Sagitario',
 );
-foreach ($Horoscopo as $FechaZo => $Zodiaco) {
-    $FechaZo=date("d-m-Y",mktime($FechaZo));
-    if($FechaNueva >= $FechaZo){
-        echo $Zodiaco;
+$Horoscopo = "";
+foreach ($CalendarioHoroscopo as $FechaZo => $Zodiaco) {
+    if($Fecha < $FechaZo && $Horoscopo == ""){
+        $Horoscopo=$Zodiaco;
     }
 }
-
+echo "Eres $Horoscopo"
 ?>
