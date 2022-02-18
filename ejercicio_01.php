@@ -2,7 +2,7 @@
 echo "<!DOCTYPE html>
 <html>
     <head>
-        <title>UD05_T08_Verificar_datos_Formulario</title>
+        <title>UD05_T10_boletin_3</title>
         <meta charset='UTF-8'>    
         <h1>UD05_T10</h1>
         <h2>Ejercicio 1</h2>
@@ -40,7 +40,6 @@ if ($Numero > 5 or $HoraDia > 9) {
         }
         $cont++;
     }
-        
 }
 echo '</form>
 </body>
