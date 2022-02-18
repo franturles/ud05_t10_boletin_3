@@ -12,36 +12,45 @@
     <body>
         <form action="ejercicio_12.php" enctype='multipart/form-data' method='post'>
         <label>Pregunta 1: ¿Como se llama el protagonista de SAO?</label><br />
-            <input type="radio" name="preg1" value="1"/> Kirito<br />
-            <input type="radio" name="preg1" value="2"/> Mirio<br />
+            <input type="radio" name="preg1" value="kirito"/> Kirito<br />
+            <input type="radio" name="preg1" value="mirio"/> Mirio<br />
 </br>
-        <label>Pregunta 2: ¿Como se llama el protagonista de SAO?</label><br />
-            <input type="radio" name="preg1" value="1"/> Kirito<br />
-            <input type="radio" name="preg1" value="2"/> Mirio<br />
-        <label>Pregunta 3: ¿Como se llama el protagonista de SAO?</label><br />
-            <input type="radio" name="preg1" value="1"/> Kirito<br />
-            <input type="radio" name="preg1" value="2"/> Mirio<br />
-        <label>Pregunta 4: ¿Como se llama el protagonista de SAO?</label><br />
-            <input type="radio" name="preg1" value="1"/> Kirito<br />
-            <input type="radio" name="preg1" value="2"/> Mirio<br />
-        <label>Pregunta 5: ¿Como se llama el protagonista de SAO?</label><br />
-            <input type="radio" name="preg1" value="1"/> Kirito<br />
-            <input type="radio" name="preg1" value="2"/> Mirio<br />
-        <label>Pregunta 6: ¿Como se llama el protagonista de SAO?</label><br />
-            <input type="radio" name="preg1" value="1"/> Kirito<br />
-            <input type="radio" name="preg1" value="2"/> Mirio<br />
-        <label>Pregunta 7: ¿Como se llama el protagonista de SAO?</label><br />
-            <input type="radio" name="preg1" value="1"/> Kirito<br />
-            <input type="radio" name="preg1" value="2"/> Mirio<br />
-        <label>Pregunta 8: ¿Como se llama el protagonista de SAO?</label><br />
-            <input type="radio" name="preg1" value="1"/> Kirito<br />
-            <input type="radio" name="preg1" value="2"/> Mirio<br />
-        <label>Pregunta 9: ¿Como se llama el protagonista de SAO?</label><br />
-            <input type="radio" name="preg1" value="1"/> Kirito<br />
-            <input type="radio" name="preg1" value="2"/> Mirio<br /> 
+        <label>Pregunta 2: ¿Como se llama el sistema de poder de HxH?</label><br />
+            <input type="radio" name="preg2" value="haki"/> Haki<br />
+            <input type="radio" name="preg2" value="nem"/> Nem<br />
+</br>
+        <label>Pregunta 3: ¿Como se llama el protagonista de SNK?</label><br />
+            <input type="radio" name="preg3" value="krugger"/> Eren Krugger<br />
+            <input type="radio" name="preg3" value="jaeger"/> Eren Jaeger<br />
+</br>
+        <label>Pregunta 4: ¿Como se llama el maestro de Mob?</label><br />
+            <input type="radio" name="preg4" value="reigen"/>Reigen Arataka<br />
+            <input type="radio" name="preg4" value="rikuto"/>Rikuto Akihiro<br/>
+</br>
+        <label>Pregunta 5: ¿Como se llama las espadas de Bleach?</label><br />
+            <input type="radio" name="preg5" value="kuto"/> Zanpakuto<br />
+            <input type="radio" name="preg5" value="polo"/> Zurunpoko<br />
+</br>
+        <label>Pregunta 6: ¿Cuantos dioses de la destruccion participan en el Torneo del Poder?</label><br />
+            <input type="radio" name="preg6" value="8"/>8<br />
+            <input type="radio" name="preg6" value="12"/>12<br />
+</br>
+        <label>Pregunta 7: ¿De que tipo es la fruta de Luffy?</label><br />
+            <input type="radio" name="preg7" value="logia"/> Logia<br />
+            <input type="radio" name="preg7" value="paramecia"/> Paramecia<br />
+</br>
+        <label>Pregunta 8: ¿Cuantas murallas hay en SNK?</label><br />
+            <input type="radio" name="preg8" value="6"/>6<br />
+            <input type="radio" name="preg8" value="3"/>3<br />
+</br>
+        <label>Pregunta 9: ¿Como se llaman la habilidad de ojos que tienen los Uchihas?</label><br />
+            <input type="radio" name="preg9" value="1"/>Sharingan <br />
+            <input type="radio" name="preg9" value="2"/>Rinnegan <br /> 
+</br>
         <label>Pregunta 10: ¿Como se llama el protagonista de SAO?</label><br />
-            <input type="radio" name="preg1" value="1"/> Kirito<br />
-            <input type="radio" name="preg1" value="2"/> Mirio<br />   
+            <input type="radio" name="preg10" value="1"/> Kirito<br />
+            <input type="radio" name="preg10" value="2"/> Mirio<br />   
+</br>
            <p><input type='submit' value='Submit'/></p>
         </form>
     </body>
