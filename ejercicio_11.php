@@ -17,14 +17,10 @@
     <?php
     $Horas=$_REQUEST['hora'];
     $Minutos=$_REQUEST['minuto'];
-    #$HoraCompleta=date("G",mktime($Horas,$Minutos));
-    $HoraCompleta=mktime($Horas,$Minutos);
-    #$Resultado=($Horas*60)*60;
-    #echo $Resultado;
-    $Medianoche=mktime(0,0,0,date("n"),date("j")+1);
-    $Diferencia=$HoraCompleta->diff($Medianoche);
-    echo $Diferencia->format('%d');
-    #$Intervalo = $HoraCompleta->diff($Medianoche);
-    #echo $Intervalo->format('%s');
+    
+    $HoraCompleta=($Horas*60*60)+($Minutos*60);
+    $Medianoche=24*60*60;
+    $Resultado=$Medianoche-$HoraCompleta;
+    echo "Faltan $Resultado segundos hasta medianoche";
     ?>
 </html>
