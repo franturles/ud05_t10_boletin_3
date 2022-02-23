@@ -15,10 +15,22 @@ negativo. Se permiten números de hasta 5 dígitos.</h3>
     </body>
     <?php
         $Numero=$_REQUEST["numero"];
-    if(strlen($Numero) > 5){
-     echo "Tiene que ser de 5 cifras";
-    }else{
-    echo strlen($Numero);
+        if($Numero < 0){
+            if(strlen($Numero)-1>5){
+                echo "Tiene que ser de 5 cifras";
+            }
+            else{
+                echo strlen($Numero)-1;
+            }
+
+        }
+        else{
+            if(strlen($Numero)>5){
+                echo "Tiene que ser de 5 cifras";
+            }
+            else{
+                echo strlen($Numero);
+            }
     }
     ?>
 </html>
