@@ -13,9 +13,12 @@
     </from>
     <?php
     $Numero=$_REQUEST["numero"];
-    if($Numero%2 == 0){
+    if(($Numero % 2) == 0){
         echo "$Numero es par";
-    }elseif ($Numero%5 == 0) {
+    }else{
+        echo "$Numero es impar";
+    }
+    if (($Numero % 5) == 0) {
         echo "$Numero es divisible entre 5";
     } 
     
